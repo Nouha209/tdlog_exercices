@@ -1,3 +1,6 @@
+import unittest
+
+
 """
 Complete the solution so that it returns true if the first argument(string)
 passed in ends with the 2nd argument (also a string).
@@ -10,9 +13,8 @@ Examples:
 
 
 def solution(string, ending):
-
-
     return string.endswith(ending)
+
 
 """
 Create unit test using those cases:
@@ -34,14 +36,10 @@ fixed_tests_False = (
     ( "spam",    "eggs"  )
 )
 """
-import unittest
+
 
 class TestSolution(unittest.TestCase):
-
-
     def test_fixed_tests_true(self):
-
-
         fixed_tests_True = (
             ("samurai", "ai"),
             ("ninja", "ja"),
@@ -54,10 +52,7 @@ class TestSolution(unittest.TestCase):
             with self.subTest(string=string, ending=ending):
                 self.assertTrue(solution(string, ending))
 
-
     def test_fixed_tests_false(self):
-
-        
         fixed_tests_False = (
             ("sumo", "omo"),
             ("samurai", "ra"),
